@@ -14,6 +14,11 @@
 		043C05F1299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043C05EF299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld */; };
 		043C05F3299D2A5000DC4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043C05F2299D2A5000DC4739 /* Assets.xcassets */; };
 		043C05F6299D2A5000DC4739 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043C05F4299D2A5000DC4739 /* LaunchScreen.storyboard */; };
+		043C05FE299D2ECC00DC4739 /* ImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */; };
+		043C0603299D309400DC4739 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05FF299D309400DC4739 /* User+CoreDataClass.swift */; };
+		043C0604299D309400DC4739 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0600299D309400DC4739 /* User+CoreDataProperties.swift */; };
+		043C0605299D309400DC4739 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0601299D309400DC4739 /* Book+CoreDataClass.swift */; };
+		043C0606299D309400DC4739 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		043C05F2299D2A5000DC4739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043C05F5299D2A5000DC4739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043C05F7299D2A5000DC4739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransformer.swift; sourceTree = "<group>"; };
+		043C05FF299D309400DC4739 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		043C0600299D309400DC4739 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		043C0601299D309400DC4739 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		043C05E5299D2A4F00DC4739 /* CoreData-PET */ = {
 			isa = PBXGroup;
 			children = (
+				043C0607299D30B700DC4739 /* CoreDataFiles */,
 				043C05E6299D2A4F00DC4739 /* AppDelegate.swift */,
 				043C05E8299D2A4F00DC4739 /* SceneDelegate.swift */,
 				043C05EA299D2A4F00DC4739 /* ViewController.swift */,
@@ -68,6 +79,18 @@
 				043C05EF299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld */,
 			);
 			path = "CoreData-PET";
+			sourceTree = "<group>";
+		};
+		043C0607299D30B700DC4739 /* CoreDataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				043C05FF299D309400DC4739 /* User+CoreDataClass.swift */,
+				043C0600299D309400DC4739 /* User+CoreDataProperties.swift */,
+				043C0601299D309400DC4739 /* Book+CoreDataClass.swift */,
+				043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */,
+				043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */,
+			);
+			path = CoreDataFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +166,11 @@
 			files = (
 				043C05F1299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld in Sources */,
 				043C05EB299D2A4F00DC4739 /* ViewController.swift in Sources */,
+				043C0606299D309400DC4739 /* Book+CoreDataProperties.swift in Sources */,
+				043C0605299D309400DC4739 /* Book+CoreDataClass.swift in Sources */,
+				043C0603299D309400DC4739 /* User+CoreDataClass.swift in Sources */,
+				043C0604299D309400DC4739 /* User+CoreDataProperties.swift in Sources */,
+				043C05FE299D2ECC00DC4739 /* ImageTransformer.swift in Sources */,
 				043C05E7299D2A4F00DC4739 /* AppDelegate.swift in Sources */,
 				043C05E9299D2A4F00DC4739 /* SceneDelegate.swift in Sources */,
 			);

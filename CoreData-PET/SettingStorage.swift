@@ -6,7 +6,26 @@
 //
 
 import Foundation
+import UIKit
+
+enum UserDefaultsValue: String {
+    case  imageIsVisible
+    case backgroungdColor
+    case tableSeparatorsIsActive
+}
 
 class SettingStorage {
+    
+    static let instance = SettingStorage()
+    let defaults = UserDefaults.standard
+    
+    var imageIsVisible: Bool!
+    var backgroungdColor: String!
+    var tableSeparatorsIsActive: Bool!
+    
+    required init() {
+        
+        
+    }
     
 }

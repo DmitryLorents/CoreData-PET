@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		043C05E7299D2A4F00DC4739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05E6299D2A4F00DC4739 /* AppDelegate.swift */; };
 		043C05E9299D2A4F00DC4739 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05E8299D2A4F00DC4739 /* SceneDelegate.swift */; };
-		043C05EB299D2A4F00DC4739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05EA299D2A4F00DC4739 /* ViewController.swift */; };
+		043C05EB299D2A4F00DC4739 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05EA299D2A4F00DC4739 /* UsersViewController.swift */; };
 		043C05EE299D2A4F00DC4739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043C05EC299D2A4F00DC4739 /* Main.storyboard */; };
 		043C05F1299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043C05EF299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld */; };
 		043C05F3299D2A5000DC4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043C05F2299D2A5000DC4739 /* Assets.xcassets */; };
@@ -19,13 +19,18 @@
 		043C0604299D309400DC4739 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0600299D309400DC4739 /* User+CoreDataProperties.swift */; };
 		043C0605299D309400DC4739 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0601299D309400DC4739 /* Book+CoreDataClass.swift */; };
 		043C0606299D309400DC4739 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */; };
+		043C060B299D4E3500DC4739 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C060A299D4E3500DC4739 /* NewUserViewController.swift */; };
+		043C060D299D4E8400DC4739 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C060C299D4E8400DC4739 /* BooksViewController.swift */; };
+		043C060F299D4EA300DC4739 /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C060E299D4EA300DC4739 /* NewBookViewController.swift */; };
+		043C0611299D4EC300DC4739 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0610299D4EC300DC4739 /* SettingsViewController.swift */; };
+		043C0614299D4F2300DC4739 /* SettingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0613299D4F2300DC4739 /* SettingStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		043C05E3299D2A4F00DC4739 /* CoreData-PET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreData-PET.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		043C05E6299D2A4F00DC4739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043C05E8299D2A4F00DC4739 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043C05EA299D2A4F00DC4739 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		043C05EA299D2A4F00DC4739 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		043C05ED299D2A4F00DC4739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		043C05F0299D2A4F00DC4739 /* CoreData_PET.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData_PET.xcdatamodel; sourceTree = "<group>"; };
 		043C05F2299D2A5000DC4739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +41,11 @@
 		043C0600299D309400DC4739 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		043C0601299D309400DC4739 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
 		043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		043C060A299D4E3500DC4739 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		043C060C299D4E8400DC4739 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		043C060E299D4EA300DC4739 /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
+		043C0610299D4EC300DC4739 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		043C0613299D4F2300DC4739 /* SettingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +81,9 @@
 				043C0607299D30B700DC4739 /* CoreDataFiles */,
 				043C05E6299D2A4F00DC4739 /* AppDelegate.swift */,
 				043C05E8299D2A4F00DC4739 /* SceneDelegate.swift */,
-				043C05EA299D2A4F00DC4739 /* ViewController.swift */,
+				043C0612299D4EF000DC4739 /* VC */,
 				043C05EC299D2A4F00DC4739 /* Main.storyboard */,
+				043C0613299D4F2300DC4739 /* SettingStorage.swift */,
 				043C05F2299D2A5000DC4739 /* Assets.xcassets */,
 				043C05F4299D2A5000DC4739 /* LaunchScreen.storyboard */,
 				043C05F7299D2A5000DC4739 /* Info.plist */,
@@ -91,6 +102,18 @@
 				043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */,
 			);
 			path = CoreDataFiles;
+			sourceTree = "<group>";
+		};
+		043C0612299D4EF000DC4739 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				043C05EA299D2A4F00DC4739 /* UsersViewController.swift */,
+				043C060A299D4E3500DC4739 /* NewUserViewController.swift */,
+				043C0610299D4EC300DC4739 /* SettingsViewController.swift */,
+				043C060E299D4EA300DC4739 /* NewBookViewController.swift */,
+				043C060C299D4E8400DC4739 /* BooksViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,13 +188,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				043C05F1299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld in Sources */,
-				043C05EB299D2A4F00DC4739 /* ViewController.swift in Sources */,
+				043C05EB299D2A4F00DC4739 /* UsersViewController.swift in Sources */,
+				043C060D299D4E8400DC4739 /* BooksViewController.swift in Sources */,
 				043C0606299D309400DC4739 /* Book+CoreDataProperties.swift in Sources */,
 				043C0605299D309400DC4739 /* Book+CoreDataClass.swift in Sources */,
 				043C0603299D309400DC4739 /* User+CoreDataClass.swift in Sources */,
+				043C0614299D4F2300DC4739 /* SettingStorage.swift in Sources */,
 				043C0604299D309400DC4739 /* User+CoreDataProperties.swift in Sources */,
 				043C05FE299D2ECC00DC4739 /* ImageTransformer.swift in Sources */,
+				043C060B299D4E3500DC4739 /* NewUserViewController.swift in Sources */,
 				043C05E7299D2A4F00DC4739 /* AppDelegate.swift in Sources */,
+				043C0611299D4EC300DC4739 /* SettingsViewController.swift in Sources */,
+				043C060F299D4EA300DC4739 /* NewBookViewController.swift in Sources */,
 				043C05E9299D2A4F00DC4739 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

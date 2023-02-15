@@ -24,7 +24,17 @@ class SettingStorage {
     var tableSeparatorsIsActive: Bool!
     
     required init() {
+        if let imageIsvisible = defaults.object(forKey: UserDefaultsValue.imageIsVisible.rawValue) as? Bool {
+            self.imageIsVisible = imageIsvisible
+        } else { self.imageIsVisible = true }
+            
+        if let backgroungdColor = defaults.object(forKey: UserDefaultsValue.backgroungdColor.rawValue) as? String {
+            self.backgroungdColor = backgroungdColor
+        } else { backgroungdColor = "white" }
         
+        if let tableSeparatorsIsActive = defaults.object(forKey: UserDefaultsValue.tableSeparatorsIsActive.rawValue) as? Bool {
+            self.tableSeparatorsIsActive = tableSeparatorsIsActive
+        } else { tableSeparatorsIsActive = true}
         
     }
     

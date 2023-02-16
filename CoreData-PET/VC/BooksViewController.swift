@@ -6,15 +6,23 @@
 //
 
 import UIKit
+import CoreData
 
 class BooksViewController: UIViewController {
+    
+    //let fetchResultController: NSFetchedResultsController<Book>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        performFetch()
 
         // Do any additional setup after loading the view.
     }
-    
+    func performFetch() {
+        let fetchRequeest = Book.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+    }
 
     /*
     // MARK: - Navigation

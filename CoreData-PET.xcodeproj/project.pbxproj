@@ -102,6 +102,7 @@
 				043C0601299D309400DC4739 /* Book+CoreDataClass.swift */,
 				043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */,
 				043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */,
+				043C0615299DDEDE00DC4739 /* CoreDataManager.swift */,
 			);
 			path = CoreDataFiles;
 			sourceTree = "<group>";
@@ -113,7 +114,6 @@
 				043C060A299D4E3500DC4739 /* NewUserViewController.swift */,
 				043C0610299D4EC300DC4739 /* SettingsViewController.swift */,
 				043C060E299D4EA300DC4739 /* NewBookViewController.swift */,
-				043C0615299DDEDE00DC4739 /* CoreDataManager.swift */,
 				043C060C299D4E8400DC4739 /* BooksViewController.swift */,
 			);
 			path = VC;

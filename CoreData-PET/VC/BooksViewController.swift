@@ -19,6 +19,7 @@ class BooksViewController: UIViewController {
         performFetch()
         tableView.delegate = self
         tableView.dataSource = self
+        fetchResultController.delegate = self
         
     }
     
@@ -64,6 +65,14 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let managedObject = fetchResultController.object(at: indexPath) as! NSManagedObject
+            CoreDataManager.instance.context.delete(managedObject)
+            CoreDataManager.instance.saveContext()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addBook" {
             let vc = segue.destination as? NewBookViewController
@@ -71,3 +80,43 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
+
+extension BooksViewController: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = indexPath {
+                tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        case .update:
+            if let indexPath = indexPath,
+               let book = fetchResultController.object(at: indexPath) as? Book,
+               let cell = tableView.cellForRow(at: indexPath) {
+                cell.textLabel?.text = book.name
+                cell.detailTextLabel?.text = book.author
+                cell.imageView?.image = book.image
+            }
+        default: break
+        }
+    }
+        
+        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+            tableView.endUpdates()
+        }
+        
+    }

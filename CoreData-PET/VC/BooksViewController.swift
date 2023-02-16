@@ -60,14 +60,13 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let book = fetchResultController.object(at: indexPath) as? Book {
-            performSegue(withIdentifier: "addBook", sender: book)
-        }
+        let book = fetchResultController.object(at: indexPath)
+        performSegue(withIdentifier: "addBook", sender: book)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let managedObject = fetchResultController.object(at: indexPath) as! NSManagedObject
+            let managedObject = fetchResultController.object(at: indexPath) as NSManagedObject
             CoreDataManager.instance.context.delete(managedObject)
             CoreDataManager.instance.saveContext()
         }
@@ -89,7 +88,7 @@ extension BooksViewController: NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
-            if let indexPath = indexPath {
+            if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
         case .delete:
@@ -104,19 +103,19 @@ extension BooksViewController: NSFetchedResultsControllerDelegate {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         case .update:
-            if let indexPath = indexPath,
-               let book = fetchResultController.object(at: indexPath) as? Book,
-               let cell = tableView.cellForRow(at: indexPath) {
-                cell.textLabel?.text = book.name
-                cell.detailTextLabel?.text = book.author
-                cell.imageView?.image = book.image
+            if let indexPath = indexPath {
+                let book = fetchResultController.object(at: indexPath)
+                let cell = tableView.cellForRow(at: indexPath)
+                cell?.textLabel?.text = book.name
+                cell?.detailTextLabel?.text = book.author
+                cell?.imageView?.image = book.image
             }
         default: break
         }
     }
-        
-        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-            tableView.endUpdates()
-        }
-        
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
     }
+    
+}

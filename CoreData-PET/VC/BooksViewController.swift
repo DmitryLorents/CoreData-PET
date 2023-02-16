@@ -13,14 +13,15 @@ class BooksViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var fetchResultController: NSFetchedResultsController<Book>!
     var books = [Book]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         performFetch()
         tableView.delegate = self
         tableView.dataSource = self
-       
+        
     }
+    
     func performFetch() {
         let fetchRequeest = Book.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -31,13 +32,11 @@ class BooksViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
-        
     }
-
-
 }
 
 extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchResultController.sections {
             return sections[section].numberOfObjects
@@ -55,8 +54,20 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
             cell.detailTextLabel?.text = book.author
             cell.imageView?.image = book.image
         }
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let book = fetchResultController.object(at: indexPath) as? Book {
+            performSegue(withIdentifier: "addBook", sender: book)
+        }
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addBook" {
+            let vc = segue.destination as? NewBookViewController
+            vc?.book = sender as? Book
+        }
+    }
 }

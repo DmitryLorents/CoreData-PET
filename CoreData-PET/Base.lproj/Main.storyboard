@@ -49,7 +49,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wn4-Ed-zfg">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Users" id="vdW-oO-CMw"/>
+                                    <navigationItem title="Users" id="vdW-oO-CMw">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gvw-jx-znI">
+                                            <connections>
+                                                <segue destination="wDT-Su-3BF" kind="show" identifier="addUser" id="ns1-3G-AlJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -66,9 +72,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Users" image="person" catalog="system" selectedImage="person.fill" id="iAr-6a-PDr"/>
-                    <connections>
-                        <segue destination="wDT-Su-3BF" kind="presentation" id="RNh-o7-baS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,6 +146,7 @@
                             <constraint firstItem="ayK-Qd-LbJ" firstAttribute="centerY" secondItem="HX1-S3-jRO" secondAttribute="centerY" id="zgN-Cp-9kZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cLk-KR-LlK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puQ-wv-znq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,7 +183,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUk-f4-Mvz">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Books" id="mI2-L7-l7d"/>
+                                    <navigationItem title="Books" id="mI2-L7-l7d">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YiK-LL-cIe">
+                                            <connections>
+                                                <segue destination="1oA-lK-TPo" kind="show" identifier="addBook" id="c7a-XQ-Ggn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XbH-Nt-pi1">
@@ -201,9 +211,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Book" image="book" catalog="system" selectedImage="book.fill" id="zmo-7U-Yt7"/>
                     <navigationItem key="navigationItem" id="VMb-HR-4Zo"/>
-                    <connections>
-                        <segue destination="1oA-lK-TPo" kind="presentation" id="k7c-7M-tIN"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57I-UJ-nDj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,8 +228,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Create book" id="7xm-a7-1ox">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="vLP-Zd-7Ja"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="n1Y-II-5GE"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="vLP-Zd-7Ja">
+                                            <connections>
+                                                <action selector="cancelButtonAction:" destination="1oA-lK-TPo" id="FvY-a0-ayV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="n1Y-II-5GE">
+                                            <connections>
+                                                <action selector="saveButtonaction:" destination="1oA-lK-TPo" id="iOr-rh-FjJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -277,6 +292,12 @@
                             <constraint firstItem="W0i-fn-qYM" firstAttribute="leading" secondItem="iC8-33-3Xv" secondAttribute="leading" constant="20" id="xLy-Sv-C2G"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kil-Fm-TGc"/>
+                    <connections>
+                        <outlet property="authorTF" destination="5c2-ML-gns" id="RrK-Nf-Fq8"/>
+                        <outlet property="imageView" destination="52g-ph-2Df" id="Qjt-b3-qRT"/>
+                        <outlet property="nameTF" destination="TzU-tB-yyT" id="n3i-Ua-qeT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBF-Yd-ojA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

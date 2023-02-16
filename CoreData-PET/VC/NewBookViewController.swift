@@ -22,7 +22,6 @@ class NewBookViewController: UIViewController {
     }
     
     fileprivate func imageViewAddGesture() {
-        imageView.image = UIImage(named: "0")
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(randomImage))
         imageView.addGestureRecognizer(tapGesture)
     }
@@ -34,12 +33,13 @@ class NewBookViewController: UIViewController {
     }
     
     func setOutlets() {
-        if book != nil {
-            nameTF.text = book?.name
-            authorTF.text = book?.author
-            imageView.image = book?.image
+        if let book = book {
+            nameTF.text = book.name
+            authorTF.text = book.author
+            imageView.image = book.image
         } else {
             book = Book(context: CoreDataManager.instance.context)
+            imageView.image = UIImage(named: "0")
         }
     }
     

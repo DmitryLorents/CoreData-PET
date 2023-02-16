@@ -15,15 +15,10 @@ class NewBookViewController: UIViewController {
     @IBOutlet weak var authorTF: UITextField!
     var book: Book?
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setOutlets()
         imageViewAddGesture()
-        
     }
     
     fileprivate func imageViewAddGesture() {
@@ -47,8 +42,6 @@ class NewBookViewController: UIViewController {
             book = Book(context: CoreDataManager.instance.context)
         }
     }
-    
-    
     
     fileprivate func saveBook() -> Bool {
         if nameTF.text?.isEmpty ?? true {

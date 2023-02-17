@@ -51,11 +51,11 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        if let book = fetchResultController.object(at: indexPath) as? Book {
-            cell.textLabel?.text = book.name
-            cell.detailTextLabel?.text = book.author
-            cell.imageView?.image = book.image
-        }
+        let book = fetchResultController.object(at: indexPath)
+        cell.textLabel?.text = book.name
+        cell.detailTextLabel?.text = book.author
+        cell.imageView?.image = book.image
+        
         
         return cell
     }

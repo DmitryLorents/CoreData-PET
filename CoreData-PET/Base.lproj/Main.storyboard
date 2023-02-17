@@ -89,8 +89,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Create user" id="HUc-Ds-xyJ">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="TWS-Dv-Rz6"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="Mob-3A-jyr"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="TWS-Dv-Rz6">
+                                            <connections>
+                                                <action selector="cancelButtonAction:" destination="wDT-Su-3BF" id="0au-BY-bqR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="Mob-3A-jyr">
+                                            <connections>
+                                                <action selector="saveButtonAction:" destination="wDT-Su-3BF" id="6he-aj-BcQ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -134,12 +142,12 @@
                             <constraint firstItem="ayK-Qd-LbJ" firstAttribute="leading" secondItem="HX1-S3-jRO" secondAttribute="trailing" constant="8" symbolic="YES" id="QHU-jj-gg5"/>
                             <constraint firstItem="Pmo-C0-AZo" firstAttribute="trailing" secondItem="cb2-3B-tQR" secondAttribute="trailing" id="QPT-kq-UgK"/>
                             <constraint firstItem="cb2-3B-tQR" firstAttribute="trailing" secondItem="ayK-Qd-LbJ" secondAttribute="trailing" constant="20" id="UfZ-3P-Kep"/>
+                            <constraint firstItem="Pmo-C0-AZo" firstAttribute="top" secondItem="zm0-us-0QT" secondAttribute="top" id="UpB-Nl-K67"/>
                             <constraint firstItem="ZhL-UX-VuF" firstAttribute="centerY" secondItem="O9v-uP-5Rj" secondAttribute="centerY" id="Urb-VN-ceP"/>
                             <constraint firstItem="Pmo-C0-AZo" firstAttribute="leading" secondItem="cb2-3B-tQR" secondAttribute="leading" id="Xnl-NR-TYO"/>
                             <constraint firstItem="ZhL-UX-VuF" firstAttribute="leading" secondItem="O9v-uP-5Rj" secondAttribute="trailing" constant="20" id="bty-hr-qri"/>
                             <constraint firstItem="ayK-Qd-LbJ" firstAttribute="top" secondItem="Pmo-C0-AZo" secondAttribute="bottom" constant="30" id="eIz-AA-qxj"/>
                             <constraint firstItem="pzu-mU-Drr" firstAttribute="leading" secondItem="HX1-S3-jRO" secondAttribute="leading" id="eOM-KR-9Te"/>
-                            <constraint firstItem="Pmo-C0-AZo" firstAttribute="top" secondItem="cb2-3B-tQR" secondAttribute="top" constant="-44" id="f2E-bg-oWe"/>
                             <constraint firstItem="ZhL-UX-VuF" firstAttribute="trailing" secondItem="ayK-Qd-LbJ" secondAttribute="trailing" id="nKh-b7-1be"/>
                             <constraint firstItem="HX1-S3-jRO" firstAttribute="leading" secondItem="cb2-3B-tQR" secondAttribute="leading" constant="20" id="ohI-Ub-E5P"/>
                             <constraint firstItem="O9v-uP-5Rj" firstAttribute="centerY" secondItem="pzu-mU-Drr" secondAttribute="centerY" id="qSM-bY-xMJ"/>
@@ -147,6 +155,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cLk-KR-LlK"/>
+                    <connections>
+                        <outlet property="bookNameTF" destination="O9v-uP-5Rj" id="g7E-km-n8l"/>
+                        <outlet property="userNameTF" destination="ayK-Qd-LbJ" id="lHu-yx-yZU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puQ-wv-znq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,22 +8,53 @@
 import UIKit
 
 class NewUserViewController: UIViewController {
-
+    
+    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var bookNameTF: UITextField!
+    var user: User?
+    var book: Book?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setOutlets()
 
-        // Do any additional setup after loading the view.
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    fileprivate func setOutlets() {
+        if let user = user {
+            userNameTF.text = user.name
+            bookNameTF.text = user.book?.name
+        } else {
+            user = User(context: CoreDataManager.instance.context)
+        }
     }
-    */
+    
+    func saveUser() -> Bool {
+        if (userNameTF.text?.isEmpty) ?? true || (bookNameTF.text?.isEmpty) ?? true {
+            let alertController = UIAlertController(title: "Warninig", message: "Please enter user name, or get its book", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
+            present(alertController, animated: true)
+            return false
+        } else {
+            user?.name = userNameTF.text
+            user?.book = nil//book
+            CoreDataManager.instance.saveContext()
+        }
+       return true
+    }
+    
+    @IBAction func saveButtonAction(_ sender: Any) {
+        if saveUser() {
+            dismiss(animated: true)
+        }
+    }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 
 }

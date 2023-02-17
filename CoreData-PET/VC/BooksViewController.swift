@@ -35,6 +35,7 @@ class BooksViewController: UIViewController {
         }
     }
 }
+// MARK: - DataSource
 
 extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -58,6 +59,7 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    //MARK: - Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = fetchResultController.object(at: indexPath)
@@ -79,6 +81,7 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
+//MARK: -  NSFetchedResultsControllerDelegate
 
 extension BooksViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

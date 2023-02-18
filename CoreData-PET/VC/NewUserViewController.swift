@@ -13,6 +13,7 @@ class NewUserViewController: UIViewController {
     @IBOutlet weak var bookNameTF: UITextField!
     var user: User?
     var book: Book?
+    var imageIsVisible: Bool!
     
     
     
@@ -21,6 +22,12 @@ class NewUserViewController: UIViewController {
         setOutlets()
 
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        SettingStorage.instance.setView(view: self.view, tableView: nil, imageIsVisible: &imageIsVisible)
     }
     
     fileprivate func setOutlets() {

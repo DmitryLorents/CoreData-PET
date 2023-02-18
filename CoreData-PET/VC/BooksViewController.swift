@@ -15,6 +15,7 @@ class BooksViewController: UIViewController {
     var books = [Book]()
     typealias Clouser = (Book) -> ()
     var getBookClouser: Clouser?
+    var imageIsVisible: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,12 @@ class BooksViewController: UIViewController {
         tableView.dataSource = self
         fetchResultController.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        SettingStorage.instance.setView(view: self.view, tableView: tableView, imageIsVisible: &imageIsVisible)
     }
     
     func performFetch() {
@@ -57,7 +64,8 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = book.name
         cell.detailTextLabel?.text = book.author
         cell.imageView?.image = book.image
-        
+        cell.imageView?.isHidden = !imageIsVisible
+        //cell.backgroundColor = view.backgroundColor
         
         return cell
     }

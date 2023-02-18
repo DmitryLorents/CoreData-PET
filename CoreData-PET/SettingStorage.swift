@@ -26,26 +26,32 @@ class SettingStorage {
     var backgroungdColor: Colors!
     var tableSeparatorsIsActive: Bool!
     
-    public func setView(view: UIView, tableView: UITableView, imageIsVisible: inout Bool) {
+    public func setView(view: UIView, tableView: UITableView?, imageIsVisible: inout Bool?) {
         //set background color
         switch backgroungdColor {
         case .white:
             view.backgroundColor = .white
+            tableView?.backgroundColor = .white
         case .cyan:
             view.backgroundColor = .cyan
+            tableView?.backgroundColor = .cyan
         case .yellow :
             view.backgroundColor = .yellow
-        default: view.backgroundColor = .white
+            tableView?.backgroundColor = .yellow
+        default:
+            view.backgroundColor = .white
+            tableView?.backgroundColor = .white
         }
         
         // set visability of image
         imageIsVisible = self.imageIsVisible
+        tableView?.reloadData()
         
         //set separator type
         if tableSeparatorsIsActive {
-            tableView.separatorStyle = .singleLine
+            tableView?.separatorStyle = .singleLine
         } else {
-            tableView.separatorStyle = .none
+            tableView?.separatorStyle = .none
         }
     }
     

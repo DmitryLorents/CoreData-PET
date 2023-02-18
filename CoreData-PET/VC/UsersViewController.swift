@@ -12,6 +12,7 @@ class UsersViewController: UIViewController {
     
     @IBOutlet weak var usersTableView: UITableView!
     var fetchResultController: NSFetchedResultsController<User>!
+    var imageIsVisible: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,17 @@ class UsersViewController: UIViewController {
         performFetch()
         fetchResultController.delegate = self
         
+        
+        
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        SettingStorage.instance.setView(view: self.view, tableView: usersTableView, imageIsVisible: &imageIsVisible)
+    }
+    
     fileprivate func performFetch() {
         let fetchRequest = User.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -44,6 +55,7 @@ class UsersViewController: UIViewController {
 }
 
 extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
+    
     //MARK: - DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchResultController.sections {
@@ -58,6 +70,8 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text =  user.book?.name ?? "----"
         cell.imageView?.image = user.book?.image ?? UIImage(named: "0")
+        cell.imageView?.isHidden  = !imageIsVisible
+        //cell.backgroundColor = view.backgroundColor
         return cell
     }
     

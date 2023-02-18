@@ -14,11 +14,19 @@ class NewBookViewController: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var authorTF: UITextField!
     var book: Book?
+    var imageIsVisible: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setOutlets()
         imageViewAddGesture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        SettingStorage.instance.setView(view: self.view, tableView: nil, imageIsVisible: &imageIsVisible)
+        imageView.isHidden = !imageIsVisible
     }
     
     fileprivate func imageViewAddGesture() {

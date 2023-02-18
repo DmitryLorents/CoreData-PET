@@ -13,6 +13,9 @@ enum UserDefaultsValue: String {
     case backgroungdColor
     case tableSeparatorsIsActive
 }
+enum Colors: String {
+    case white, cyan, yellow
+}
 
 class SettingStorage {
     
@@ -24,13 +27,16 @@ class SettingStorage {
     var tableSeparatorsIsActive: Bool!
     
     required init() {
-        if let imageIsvisible = defaults.object(forKey: UserDefaultsValue.imageIsVisible.rawValue) as? Bool {
-            self.imageIsVisible = imageIsvisible
+        
+        //initialisation during start
+        
+        if let imageIsVisible = defaults.object(forKey: UserDefaultsValue.imageIsVisible.rawValue) as? Bool {
+            self.imageIsVisible = imageIsVisible
         } else { self.imageIsVisible = true }
             
         if let backgroungdColor = defaults.object(forKey: UserDefaultsValue.backgroungdColor.rawValue) as? String {
             self.backgroungdColor = backgroungdColor
-        } else { backgroungdColor = "white" }
+        } else { backgroungdColor = Colors.white.rawValue }
         
         if let tableSeparatorsIsActive = defaults.object(forKey: UserDefaultsValue.tableSeparatorsIsActive.rawValue) as? Bool {
             self.tableSeparatorsIsActive = tableSeparatorsIsActive

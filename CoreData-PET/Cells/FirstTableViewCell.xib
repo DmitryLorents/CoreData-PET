@@ -38,7 +38,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="labelTF" destination="OB7-re-ib8" id="tYX-AA-rZH"/>
-                <outlet property="switch" destination="Uur-c5-UmD" id="CT5-rK-7MD"/>
+                <outlet property="switchSetting" destination="Uur-c5-UmD" id="CT5-rK-7MD"/>
             </connections>
             <point key="canvasLocation" x="132" y="64"/>
         </tableViewCell>

@@ -4,14 +4,14 @@
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Transformable" valueTransformerName="ImageTransformer" customClassName="UIImage"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="book" inverseEntity="User"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="book" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="book" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="user" inverseEntity="Book"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="user" inverseEntity="Book"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="59"/>
-        <element name="Book" positionX="-54" positionY="0" width="128" height="89"/>
+        <element name="Book" positionX="235.9541015625" positionY="-120.6752319335938" width="128" height="103"/>
+        <element name="User" positionX="-106.3814086914062" positionY="75.50897216796875" width="128" height="73"/>
     </elements>
 </model>

@@ -17,7 +17,7 @@ extension User {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var book: Book?
+    @NSManaged public var book: NSSet? //Book?
 
 }
 

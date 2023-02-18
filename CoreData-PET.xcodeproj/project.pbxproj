@@ -15,16 +15,16 @@
 		043C05F3299D2A5000DC4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043C05F2299D2A5000DC4739 /* Assets.xcassets */; };
 		043C05F6299D2A5000DC4739 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043C05F4299D2A5000DC4739 /* LaunchScreen.storyboard */; };
 		043C05FE299D2ECC00DC4739 /* ImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */; };
-		043C0603299D309400DC4739 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C05FF299D309400DC4739 /* User+CoreDataClass.swift */; };
-		043C0604299D309400DC4739 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0600299D309400DC4739 /* User+CoreDataProperties.swift */; };
-		043C0605299D309400DC4739 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0601299D309400DC4739 /* Book+CoreDataClass.swift */; };
-		043C0606299D309400DC4739 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */; };
 		043C060B299D4E3500DC4739 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C060A299D4E3500DC4739 /* NewUserViewController.swift */; };
 		043C060D299D4E8400DC4739 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C060C299D4E8400DC4739 /* BooksViewController.swift */; };
 		043C060F299D4EA300DC4739 /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C060E299D4EA300DC4739 /* NewBookViewController.swift */; };
 		043C0611299D4EC300DC4739 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0610299D4EC300DC4739 /* SettingsViewController.swift */; };
 		043C0614299D4F2300DC4739 /* SettingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0613299D4F2300DC4739 /* SettingStorage.swift */; };
 		043C0616299DDEDE00DC4739 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C0615299DDEDE00DC4739 /* CoreDataManager.swift */; };
+		047EFC4129A0F3DD00A6BA5F /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EFC3D29A0F3DD00A6BA5F /* User+CoreDataClass.swift */; };
+		047EFC4229A0F3DD00A6BA5F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EFC3E29A0F3DD00A6BA5F /* User+CoreDataProperties.swift */; };
+		047EFC4329A0F3DD00A6BA5F /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EFC3F29A0F3DD00A6BA5F /* Book+CoreDataClass.swift */; };
+		047EFC4429A0F3DD00A6BA5F /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EFC4029A0F3DD00A6BA5F /* Book+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,16 +38,16 @@
 		043C05F5299D2A5000DC4739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043C05F7299D2A5000DC4739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransformer.swift; sourceTree = "<group>"; };
-		043C05FF299D309400DC4739 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		043C0600299D309400DC4739 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		043C0601299D309400DC4739 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
-		043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		043C060A299D4E3500DC4739 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		043C060C299D4E8400DC4739 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		043C060E299D4EA300DC4739 /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
 		043C0610299D4EC300DC4739 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		043C0613299D4F2300DC4739 /* SettingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorage.swift; sourceTree = "<group>"; };
 		043C0615299DDEDE00DC4739 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		047EFC3D29A0F3DD00A6BA5F /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "../../User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		047EFC3E29A0F3DD00A6BA5F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		047EFC3F29A0F3DD00A6BA5F /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Book+CoreDataClass.swift"; path = "../../Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		047EFC4029A0F3DD00A6BA5F /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Book+CoreDataProperties.swift"; path = "../../Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +97,10 @@
 		043C0607299D30B700DC4739 /* CoreDataFiles */ = {
 			isa = PBXGroup;
 			children = (
-				043C05FF299D309400DC4739 /* User+CoreDataClass.swift */,
-				043C0600299D309400DC4739 /* User+CoreDataProperties.swift */,
-				043C0601299D309400DC4739 /* Book+CoreDataClass.swift */,
-				043C0602299D309400DC4739 /* Book+CoreDataProperties.swift */,
+				047EFC3D29A0F3DD00A6BA5F /* User+CoreDataClass.swift */,
+				047EFC3E29A0F3DD00A6BA5F /* User+CoreDataProperties.swift */,
+				047EFC3F29A0F3DD00A6BA5F /* Book+CoreDataClass.swift */,
+				047EFC4029A0F3DD00A6BA5F /* Book+CoreDataProperties.swift */,
 				043C05FD299D2ECC00DC4739 /* ImageTransformer.swift */,
 				043C0615299DDEDE00DC4739 /* CoreDataManager.swift */,
 			);
@@ -193,15 +193,15 @@
 				043C05F1299D2A4F00DC4739 /* CoreData_PET.xcdatamodeld in Sources */,
 				043C05EB299D2A4F00DC4739 /* UsersViewController.swift in Sources */,
 				043C060D299D4E8400DC4739 /* BooksViewController.swift in Sources */,
-				043C0606299D309400DC4739 /* Book+CoreDataProperties.swift in Sources */,
-				043C0605299D309400DC4739 /* Book+CoreDataClass.swift in Sources */,
-				043C0603299D309400DC4739 /* User+CoreDataClass.swift in Sources */,
+				047EFC4129A0F3DD00A6BA5F /* User+CoreDataClass.swift in Sources */,
 				043C0614299D4F2300DC4739 /* SettingStorage.swift in Sources */,
-				043C0604299D309400DC4739 /* User+CoreDataProperties.swift in Sources */,
 				043C05FE299D2ECC00DC4739 /* ImageTransformer.swift in Sources */,
+				047EFC4429A0F3DD00A6BA5F /* Book+CoreDataProperties.swift in Sources */,
+				047EFC4329A0F3DD00A6BA5F /* Book+CoreDataClass.swift in Sources */,
 				043C060B299D4E3500DC4739 /* NewUserViewController.swift in Sources */,
 				043C0616299DDEDE00DC4739 /* CoreDataManager.swift in Sources */,
 				043C05E7299D2A4F00DC4739 /* AppDelegate.swift in Sources */,
+				047EFC4229A0F3DD00A6BA5F /* User+CoreDataProperties.swift in Sources */,
 				043C0611299D4EC300DC4739 /* SettingsViewController.swift in Sources */,
 				043C060F299D4EA300DC4739 /* NewBookViewController.swift in Sources */,
 				043C05E9299D2A4F00DC4739 /* SceneDelegate.swift in Sources */,

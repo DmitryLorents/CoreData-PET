@@ -55,8 +55,8 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") else {return UITableViewCell()}
         let user = fetchResultController.object(at: indexPath) //as? User
         cell.textLabel?.text = user.name
-        cell.detailTextLabel?.text =  "----"
-        cell.imageView?.image = UIImage(named: "0")
+        cell.detailTextLabel?.text =  user.book?.name ?? "----"
+        cell.imageView?.image = user.book?.image ?? UIImage(named: "0")
         return cell
     }
     

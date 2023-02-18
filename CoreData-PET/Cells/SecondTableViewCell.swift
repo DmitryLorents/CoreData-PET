@@ -9,7 +9,9 @@ import UIKit
 
 class SecondTableViewCell: UITableViewCell {
     
-
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

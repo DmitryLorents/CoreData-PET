@@ -16,10 +16,11 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableViewSeettings.layer.cornerRadius = 10
+        tableViewSeettings.layer.cornerRadius = 20
         tableViewSeettings.delegate = self
         tableViewSeettings.dataSource = self
         tableViewSeettings.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "firstTypeCell")
+        tableViewSeettings.register(UINib(nibName: "SecondTableViewCell", bundle: nil), forCellReuseIdentifier: "secondTypeCell")
         
 
     }
@@ -36,19 +37,20 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource  {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell") as! FirstTableViewCell
-            cell.labelTF.text = "Test"
-            cell.switch.isOn = false
+            cell.labelTF.text = "Image is visible"
+            cell.switch.isOn = true
+            return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell") as! FirstTableViewCell
-            cell.labelTF.text = "Test"
-            cell.switch.isOn = false
+            cell.labelTF.text = "Separator is visible"
+            cell.switch.isOn = true
+            return cell
         case 2:
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "secondTypeCell") as! SecondTableViewCell
+            cell.label.text = "Background"
+            return cell
+        default: return UITableViewCell()
         }
-        
-        
-        
-        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         50

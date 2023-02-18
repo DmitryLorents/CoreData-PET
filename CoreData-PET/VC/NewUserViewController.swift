@@ -26,7 +26,7 @@ class NewUserViewController: UIViewController {
     fileprivate func setOutlets() {
         if let user = user {
             userNameTF.text = user.name
-            bookNameTF.text = user.book?.name
+            //bookNameTF.text = user.book?.name
         } else {
             user = User(context: CoreDataManager.instance.context)
         }

@@ -33,8 +33,17 @@ class UsersViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addUser" {
+            let vc = segue.destination as! NewUserViewController
+            vc.user = sender as? User
+        }
+    }
+    
 }
+
 extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
+    //MARK: - DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchResultController.sections {
             return sections[section].numberOfObjects
@@ -44,11 +53,18 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") else {return UITableViewCell()}
-        let user = fetchResultController.object(at: indexPath) as? User
-        cell.textLabel?.text = user?.name
+        let user = fetchResultController.object(at: indexPath) //as? User
+        cell.textLabel?.text = user.name
         cell.detailTextLabel?.text =  "----"
         cell.imageView?.image = UIImage(named: "0")
         return cell
+    }
+    
+    //MARK: - Delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = fetchResultController.object(at: indexPath)
+        performSegue(withIdentifier: "addUser", sender: user)
     }
     
 }

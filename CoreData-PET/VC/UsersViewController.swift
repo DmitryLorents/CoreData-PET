@@ -19,6 +19,7 @@ class UsersViewController: UIViewController {
         usersTableView.delegate = self
         usersTableView.dataSource = self
         performFetch()
+        fetchResultController.delegate = self
         
     }
     fileprivate func performFetch() {

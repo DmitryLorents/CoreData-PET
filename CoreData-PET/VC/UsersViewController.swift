@@ -68,3 +68,43 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+extension UsersViewController: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        usersTableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let newIndexPath = newIndexPath {
+                usersTableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                usersTableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                usersTableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            if let newIndexPath = newIndexPath {
+                usersTableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        case .update:
+            if let indexPath = indexPath {
+                let user = fetchResultController.object(at: indexPath)
+                let cell = usersTableView.cellForRow(at: indexPath)
+                cell?.textLabel?.text = user.name
+                cell?.detailTextLabel?.text = user.book?.name
+                cell?.imageView?.image = user.book?.image
+            }
+        default: break
+        }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        usersTableView.endUpdates()
+    }
+}

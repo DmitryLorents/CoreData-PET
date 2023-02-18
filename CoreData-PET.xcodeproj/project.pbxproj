@@ -112,9 +112,9 @@
 			children = (
 				043C05EA299D2A4F00DC4739 /* UsersViewController.swift */,
 				043C060A299D4E3500DC4739 /* NewUserViewController.swift */,
-				043C0610299D4EC300DC4739 /* SettingsViewController.swift */,
-				043C060E299D4EA300DC4739 /* NewBookViewController.swift */,
 				043C060C299D4E8400DC4739 /* BooksViewController.swift */,
+				043C060E299D4EA300DC4739 /* NewBookViewController.swift */,
+				043C0610299D4EC300DC4739 /* SettingsViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";

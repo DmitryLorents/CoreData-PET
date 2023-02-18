@@ -68,6 +68,16 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "addUser", sender: user)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            let managedObject = fetchResultController.object(at: indexPath)
+            CoreDataManager.instance.context.delete(managedObject)
+            CoreDataManager.instance.saveContext()
+        default: break
+        }
+    }
+    
 }
 
 extension UsersViewController: NSFetchedResultsControllerDelegate {

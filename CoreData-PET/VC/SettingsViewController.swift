@@ -8,28 +8,35 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    
 
-    @IBOutlet weak var tableViewSettings: UITableView!
+    @IBOutlet weak var tableViewSeettings: UITableView!
     
-    @IBOutlet weak var Label: UILabel!
-    @IBOutlet weak var `switch`: UISwitch!
-    
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableViewSeettings.layer.cornerRadius = 10
+        tableViewSeettings.delegate = self
+        tableViewSeettings.dataSource = self
+        tableViewSeettings.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "firstTypeCell")
+        
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        3
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell") as! FirstTableViewCell
+        cell.labelTF.text = "Test"
+        cell.switch.isOn = false
+        
+        
+        return cell
+    }
 }

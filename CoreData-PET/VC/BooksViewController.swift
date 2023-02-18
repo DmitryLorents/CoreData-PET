@@ -13,6 +13,8 @@ class BooksViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var fetchResultController: NSFetchedResultsController<Book>!
     var books = [Book]()
+    typealias Clouser = (Book) -> ()
+    var getBookClouser: Clouser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +64,15 @@ extension BooksViewController: UITableViewDataSource, UITableViewDelegate {
     //MARK: - Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book = fetchResultController.object(at: indexPath)
-        performSegue(withIdentifier: "addBook", sender: book)
+        
+        if let clouser = getBookClouser {
+            let book = fetchResultController.object(at: indexPath)
+            clouser(book)
+            dismiss(animated: true)
+        } else {
+            let book = fetchResultController.object(at: indexPath)
+            performSegue(withIdentifier: "addBook", sender: book)
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

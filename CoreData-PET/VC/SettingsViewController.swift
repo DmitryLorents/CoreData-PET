@@ -9,6 +9,12 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var tableViewSettings: UITableView!
+    
+    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var `switch`: UISwitch!
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 

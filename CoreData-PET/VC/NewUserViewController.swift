@@ -33,7 +33,7 @@ class NewUserViewController: UIViewController {
     }
     
     func saveUser() -> Bool {
-        if (userNameTF.text?.isEmpty) ?? true { //|| (bookNameTF.text?.isEmpty) ?? true {
+        if (userNameTF.text?.isEmpty) ?? true || (bookNameTF.text?.isEmpty) ?? true {
             let alertController = UIAlertController(title: "Warninig", message: "Please enter user name, or get its book", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
             present(alertController, animated: true)

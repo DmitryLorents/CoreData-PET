@@ -352,25 +352,6 @@
         <scene sceneID="DE7-gX-1E4">
             <objects>
                 <viewController id="Cyg-ff-xsv" customClass="SettingsViewController" customModule="CoreData_PET" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SEn-E5-0aT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCp-OX-yfV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Settings" id="HPz-XJ-Q7y"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="m2Q-AM-4dT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="m2Q-AM-4dT" firstAttribute="trailing" secondItem="vCp-OX-yfV" secondAttribute="trailing" id="NdZ-Fi-vZE"/>
-                            <constraint firstItem="vCp-OX-yfV" firstAttribute="leading" secondItem="SEn-E5-0aT" secondAttribute="leading" id="QoL-Mt-tjt"/>
-                            <constraint firstItem="vCp-OX-yfV" firstAttribute="top" secondItem="m2Q-AM-4dT" secondAttribute="top" id="wMl-Md-bka"/>
-                        </constraints>
-                    </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="0yY-HH-t3A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjV-F6-5TS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

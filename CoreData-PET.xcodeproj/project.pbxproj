@@ -27,6 +27,8 @@
 		047EFC4429A0F3DD00A6BA5F /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EFC4029A0F3DD00A6BA5F /* Book+CoreDataProperties.swift */; };
 		047EFC4729A1111C00A6BA5F /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EFC4529A1111C00A6BA5F /* FirstTableViewCell.swift */; };
 		047EFC4829A1111C00A6BA5F /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047EFC4629A1111C00A6BA5F /* FirstTableViewCell.xib */; };
+		04C4045E29A1296D0050BF8A /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4045C29A1296D0050BF8A /* SecondTableViewCell.swift */; };
+		04C4045F29A1296D0050BF8A /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C4045D29A1296D0050BF8A /* SecondTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		047EFC4029A0F3DD00A6BA5F /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Book+CoreDataProperties.swift"; path = "../../Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		047EFC4529A1111C00A6BA5F /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		047EFC4629A1111C00A6BA5F /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		04C4045C29A1296D0050BF8A /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		04C4045D29A1296D0050BF8A /* SecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			children = (
 				047EFC4529A1111C00A6BA5F /* FirstTableViewCell.swift */,
 				047EFC4629A1111C00A6BA5F /* FirstTableViewCell.xib */,
+				04C4045C29A1296D0050BF8A /* SecondTableViewCell.swift */,
+				04C4045D29A1296D0050BF8A /* SecondTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			files = (
 				043C05F6299D2A5000DC4739 /* LaunchScreen.storyboard in Resources */,
 				043C05F3299D2A5000DC4739 /* Assets.xcassets in Resources */,
+				04C4045F29A1296D0050BF8A /* SecondTableViewCell.xib in Resources */,
 				047EFC4829A1111C00A6BA5F /* FirstTableViewCell.xib in Resources */,
 				043C05EE299D2A4F00DC4739 /* Main.storyboard in Resources */,
 			);
@@ -216,6 +223,7 @@
 				043C060B299D4E3500DC4739 /* NewUserViewController.swift in Sources */,
 				043C0616299DDEDE00DC4739 /* CoreDataManager.swift in Sources */,
 				043C05E7299D2A4F00DC4739 /* AppDelegate.swift in Sources */,
+				04C4045E29A1296D0050BF8A /* SecondTableViewCell.swift in Sources */,
 				047EFC4229A0F3DD00A6BA5F /* User+CoreDataProperties.swift in Sources */,
 				043C0611299D4EC300DC4739 /* SettingsViewController.swift in Sources */,
 				043C060F299D4EA300DC4739 /* NewBookViewController.swift in Sources */,

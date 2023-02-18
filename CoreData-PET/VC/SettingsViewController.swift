@@ -26,17 +26,31 @@ class SettingsViewController: UIViewController {
     
 
 }
-extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+extension SettingsViewController: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell") as! FirstTableViewCell
-        cell.labelTF.text = "Test"
-        cell.switch.isOn = false
+        
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell") as! FirstTableViewCell
+            cell.labelTF.text = "Test"
+            cell.switch.isOn = false
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell") as! FirstTableViewCell
+            cell.labelTF.text = "Test"
+            cell.switch.isOn = false
+        case 2:
+            
+        }
+        
         
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        50
     }
 }

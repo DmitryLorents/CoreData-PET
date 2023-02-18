@@ -26,11 +26,7 @@ class NewUserViewController: UIViewController {
     fileprivate func setOutlets() {
         if let user = user {
             userNameTF.text = user.name
-            book = Book(context: CoreDataManager.instance.context)
-            book!.name = "Test book"
-            book!.author = "Test author"
-            book!.image = UIImage(named: "1")
-            bookNameTF.text = book!.name
+            bookNameTF.text = user.book?.name
         } else {
             user = User(context: CoreDataManager.instance.context)
         }
@@ -58,6 +54,17 @@ class NewUserViewController: UIViewController {
     
     @IBAction func cancelButtonAction(_ sender: Any) {
         dismiss(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "getBook" {
+            let vc  = segue.destination as? BooksViewController
+            vc?.getBookClouser = { [unowned self] catchedBook in
+                self.book = catchedBook
+                self.bookNameTF.text = catchedBook.name
+            }
+        }
+            
     }
     
 
